@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/farmer.png');
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: 'gray';
+}
+
+#card-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#card {
+    background: linear-gradient(to right, #ffffff, #080b0f);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+}
+
+#button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#black-button {
+    background-color: black;
+    margin: 10px;
+}
+
+#white-button {
+    background-color: white;
+    margin: 10px;
+}
