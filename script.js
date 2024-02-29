@@ -1,5 +1,3 @@
-const defaultCardColor = 'linear-gradient(to right, #ffffff, #080b0f)';
-
 function handleButtonClick(color) {
     let cardColor = Math.random() <= 0.5 ? 'white' : 'black';
 
@@ -9,23 +7,24 @@ function handleButtonClick(color) {
 }
 
 function changeCardColor(color) {
-    document.getElementById('card').style.background = color;
+    document.getElementById('card').className = color;
 }
 
 function indicateCorrectness(isCorrect) {
-    const mapper = {
-        true: { headerText: 'Correct!', color: 'green' },
-        false: { headerText: 'Incorrect!', color: 'red'}
+    const mapping = {
+        true: { color: '#00be56' },
+        false: { color: '#752525'},
     };
 
-    document.getElementById('header').innerText = mapper[isCorrect].headerText;
-    document.getElementById('header').style.color = mapper[isCorrect].color;
+    document.getElementById('header').style.color = mapping[isCorrect].color;
+    document.getElementById('header').style.className += ` ${isCorrect ? 'correct' : 'wrong'}`;
+
+    document.getElementById('card').className += ` ${isCorrect ? 'correct' : 'wrong'}`;
 }
 
 function returnToInitialState() {
     setTimeout(() => {
-        document.getElementById('header').innerText = 'What is the color of the next card?';
-        document.getElementById('card').style.background = defaultCardColor;
-        document.getElementById('header').style.color = 'black';
+        document.getElementById('card').className = 'unknown';
+        document.getElementById('header').style.color = '#2a2a2a';
     }, 1000);
 }
