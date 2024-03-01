@@ -1,21 +1,23 @@
-function handleButtonClick(color) {
-    let cardColor = Math.random() <= 0.5 ? 'white' : 'black';
+function handleColorChoice(guessedColor) {
+    let randomColor = Math.random() <= 0.5 ? 'white' : 'black'
+    let correctness = randomColor === guessedColor ? 'correct' : 'wrong'
 
-    document.getElementById('card').className = cardColor;
-
-    indicateCorrectness(cardColor === color);
-    returnToInitialState();
+    changeCardClass([randomColor, correctness])
+    changeHeaderClass(correctness)
+    returnToInitialState()
 }
 
-function indicateCorrectness(isCorrect) {
-    let className = ` ${isCorrect ? 'correct' : 'wrong'}`
-    document.getElementById('header').className += className;
-    document.getElementById('card').className += className;
+function changeCardClass(classNames = []) {
+    document.getElementById('card').className = classNames.join(' ')
+}
+
+function changeHeaderClass(className) {
+    document.getElementById('header').className = className
 }
 
 function returnToInitialState() {
     setTimeout(() => {
-        document.getElementById('card').className = 'standard';
-        document.getElementById('header').className = 'standard'
-    }, 1000);
+        changeCardClass(['standard'])
+        changeHeaderClass('standard')
+    }, 1000)
 }

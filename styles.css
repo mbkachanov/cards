@@ -5,20 +5,21 @@ body {
     padding: 0;
 }
 
-#header.standard {
+#header {
     text-align: center;
-    color: #2a2a2a;
     transition: 0.5s ease-in-out;
+}
+
+#header.standard {
+    color: #2a2a2a;
 }
 
 #header.correct {
     color: rgb(8, 161, 8, 1);
-    transition: 0.5s ease-in-out;
 }
 
 #header.wrong {
     color: rgba(255, 0, 0, 1);
-    transition: 0.5s ease-in-out;
 }
 
 #card-row {
@@ -37,31 +38,27 @@ body {
     width: 250px;
     height: 300px;
     text-align: center;
+    transition: 0.5s ease-in-out;
 }
 
 #card.standard {
     background-image: url('img/morocco-blue.png');
-    transition: 0.5s ease-in-out;
 }
 
 #card.white {
     background-image: url('img/so-white.png');
-    transition: 0.5s ease-in-out;
 }
 
 #card.black {
     background-image: url('img/prism.png');
-    transition: 0.5s ease-in-out;
 }
 
 #card.correct {
     box-shadow: 0 0 30px rgb(8, 161, 8, 1);
-    transition: 0.5s ease-in-out;
 }
 
 #card.wrong {
     box-shadow: 0 0 30px rgba(255, 0, 0, 1);
-    transition: 0.5s ease-in-out;
 }
 
 #button-row {
@@ -72,8 +69,8 @@ body {
 }
 
 .card-button {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px 30px;
