@@ -3,21 +3,20 @@ body {
     background-image: url('img/45degreee_fabric.png');
     margin: 0;
     padding: 0;
-    min-height: 100vh;
 }
 
-h1 {
+#header.standard {
     text-align: center;
     color: #2a2a2a;
     transition: 0.5s ease-in-out;
 }
 
-h1.correct {
+#header.correct {
     color: rgb(8, 161, 8, 1);
     transition: 0.5s ease-in-out;
 }
 
-h1.wrong {
+#header.wrong {
     color: rgba(255, 0, 0, 1);
     transition: 0.5s ease-in-out;
 }
@@ -40,7 +39,7 @@ h1.wrong {
     text-align: center;
 }
 
-#card.unknown {
+#card.standard {
     background-image: url('img/morocco-blue.png');
     transition: 0.5s ease-in-out;
 }
@@ -67,14 +66,14 @@ h1.wrong {
 
 #button-row {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
 }
 
 .card-button {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

@@ -1,30 +1,21 @@
 function handleButtonClick(color) {
     let cardColor = Math.random() <= 0.5 ? 'white' : 'black';
 
-    changeCardColor(cardColor);
+    document.getElementById('card').className = cardColor;
+
     indicateCorrectness(cardColor === color);
     returnToInitialState();
 }
 
-function changeCardColor(color) {
-    document.getElementById('card').className = color;
-}
-
 function indicateCorrectness(isCorrect) {
-    const mapping = {
-        true: { color: '#00be56' },
-        false: { color: '#752525'},
-    };
-
-    document.getElementById('header').style.color = mapping[isCorrect].color;
-    document.getElementById('header').style.className += ` ${isCorrect ? 'correct' : 'wrong'}`;
-
-    document.getElementById('card').className += ` ${isCorrect ? 'correct' : 'wrong'}`;
+    let className = ` ${isCorrect ? 'correct' : 'wrong'}`
+    document.getElementById('header').className += className;
+    document.getElementById('card').className += className;
 }
 
 function returnToInitialState() {
     setTimeout(() => {
-        document.getElementById('card').className = 'unknown';
-        document.getElementById('header').style.color = '#2a2a2a';
+        document.getElementById('card').className = 'standard';
+        document.getElementById('header').className = 'standard'
     }, 1000);
 }
