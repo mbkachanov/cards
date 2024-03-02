@@ -1,8 +1,23 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-image: url('img/45degreee_fabric.png');
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 #header {
@@ -33,8 +48,6 @@ body {
 #card {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
     width: 250px;
     height: 300px;
     text-align: center;
@@ -73,15 +86,16 @@ body {
     height: 120px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px 30px;
 }
 
 #black-button {
     background-image: url('img/prism.png');
+    margin-left: 20px;
 }
 
 #white-button {
     background-image: url('img/so-white.png');
+    margin-right: 20px;
 }
 
 .mousedown {

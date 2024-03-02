@@ -9,29 +9,31 @@
 </head>
 
 <body>
-    <h1 id="header" class="standard">What is the color of the card?</h1>
+    <div class="column-container">
+        <h1 id="header" class="standard">What is the color of the card?</h1>
 
-    <div id="card-row">
-        <div id="card" class="standard"></div>
+        <div id="card-row">
+            <div id="card" class="standard"></div>
+        </div>
+
+        <div id="button-row">
+            <div
+                class="card-button"
+                id="white-button"
+                onclick="handleColorChoice('white')"
+                onmousedown="handleMouseDown(event)"
+                onmouseup="handleMouseUp(event)"
+            ></div>
+            <div
+                class="card-button"
+                id="black-button"
+                onclick="handleColorChoice('black')"
+                onmousedown="handleMouseDown(event)"
+                onmouseup="handleMouseUp(event)"
+            ></div>
+        </div>
     </div>
-
-    <div id="button-row">
-        <div
-            class="card-button"
-            id="white-button"
-            onclick="handleColorChoice('white')"
-            onmousedown="handleMouseDown(event)"
-            onmouseup="handleMouseUp(event)"
-        ></div>
-        <div
-            class="card-button"
-            id="black-button"
-            onclick="handleColorChoice('black')"
-            onmousedown="handleMouseDown(event)"
-            onmouseup="handleMouseUp(event)"
-        ></div>
-    </div>
-
+    
     <script src="script.js"></script>
 </body>
 
