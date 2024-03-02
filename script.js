@@ -21,3 +21,11 @@ function returnToInitialState() {
         changeHeaderClass('standard')
     }, 1000)
 }
+
+function handleMouseDown(event) {
+    event.target.classList.add('mousedown')
+}
+
+function handleMouseUp(event) {
+    event.target.classList.remove('mousedown')
+}

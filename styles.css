@@ -83,3 +83,7 @@ body {
 #white-button {
     background-image: url('img/so-white.png');
 }
+
+.mousedown {
+    transform: translateX(2px) translateY(2px);
+}
