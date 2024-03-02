@@ -22,10 +22,10 @@ function returnToInitialState() {
     }, 1000)
 }
 
-function handleMouseDown(event) {
-    event.target.classList.add('mousedown')
+function handlePressDown(event) {
+    event.target.classList.add('pressdown')
 }
 
-function handleMouseUp(event) {
-    event.target.classList.remove('mousedown')
+function handlePressUp(event) {
+    event.target.classList.remove('pressdown')
 }
