@@ -4,10 +4,27 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('img/45degreee_fabric.png');
     margin: 0;
     padding: 0;
     height: 100%;
+    background: linear-gradient(228deg, #7a43bc, #9568ca, #af8dd8, #cab2e6, #e4d8f3);
+    background-size: 1000% 1000%;
+
+    animation: AnimationName 30s ease infinite;
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 92%
+    }
+
+    50% {
+        background-position: 100% 9%
+    }
+
+    100% {
+        background-position: 0% 92%
+    }
 }
 
 .column-container {
@@ -34,15 +51,7 @@ body {
 }
 
 #header.standard {
-    color: #2a2a2a;
-}
-
-#header.correct {
-    color: rgb(8, 161, 8, 1);
-}
-
-#header.wrong {
-    color: rgba(255, 0, 0, 1);
+    color: #312b2b;
 }
 
 #card-row {
@@ -67,7 +76,7 @@ body {
 }
 
 #card.white {
-    background-color: #e5e5e5;
+    background-image: url('img/prism-white.png');
 }
 
 #card.black {
@@ -75,11 +84,12 @@ body {
 }
 
 #card.correct {
-    box-shadow: 0 0 30px rgb(8, 161, 8, 1);
+    box-shadow: 0 0 30px rgb(31, 143, 31);
 }
 
 #card.wrong {
-    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+    box-shadow: 0 0 30px rgb(255, 80, 80);
+    ;
 }
 
 #button-row {
@@ -103,7 +113,7 @@ body {
 }
 
 #white-button {
-    background-image: url('img/so-white.png');
+    background-image: url('img/prism-white.png');
     margin-right: 20px;
 }
 
