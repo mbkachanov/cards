@@ -1,3 +1,5 @@
+const arrowsCodesToColorsMapping = { ArrowLeft: 'white', ArrowRight: 'black' }
+
 function handleColorChoice(guessedColor) {
     let randomColor = Math.random() <= 0.5 ? 'white' : 'black'
     let correctness = randomColor === guessedColor ? 'correct' : 'wrong'
@@ -17,9 +19,34 @@ function returnToInitialState() {
 }
 
 function handlePressDown(event) {
-    event.target.classList.add('pressdown')
+    if (event.repeat) { return }
+    
+    element = event.key ?
+        document.getElementById(`${arrowsCodesToColorsMapping[event.key]}-button`)
+    :
+        event.target
+
+    
+    element.classList.add('pressdown')
 }
 
 function handlePressUp(event) {
-    event.target.classList.remove('pressdown')
+
+    element = event.key ?
+        document.getElementById(`${arrowsCodesToColorsMapping[event.key]}-button`)
+    :
+        event.target
+    
+    element.classList.remove('pressdown')
 }
+
+addEventListener('DOMContentLoaded', () => {
+    addEventListener('keydown', (event) => {
+        handlePressDown(event)
+    })
+    
+    addEventListener('keyup', (event) => {
+        handlePressUp(event)
+        handleColorChoice(arrowsCodesToColorsMapping[event.key])
+    })
+})
