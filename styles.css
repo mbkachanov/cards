@@ -76,7 +76,7 @@ body {
 }
 
 #card.standard {
-    background-image: url('img/morocco-blue.png');
+    background-image: url('img/prism-grey.png');
     /* background-image: linear-gradient(254deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
 }
 
@@ -94,7 +94,6 @@ body {
 
 #card.wrong {
     box-shadow: 0 0 50px #FF6666;
-    ;
 }
 
 #button-row {

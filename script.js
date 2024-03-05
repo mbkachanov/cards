@@ -20,33 +20,33 @@ function returnToInitialState() {
 
 function handlePressDown(event) {
     if (event.repeat) { return }
-    
-    element = event.key ?
-        document.getElementById(`${arrowsCodesToColorsMapping[event.key]}-button`)
-    :
-        event.target
 
-    
-    element.classList.add('pressdown')
+    document.getElementById(`${arrowsCodesToColorsMapping[event.key]}-button`).classList.add('pressdown')
 }
 
 function handlePressUp(event) {
+    document.getElementById(`${arrowsCodesToColorsMapping[event.key]}-button`).classList.remove('pressdown')
+}
 
-    element = event.key ?
-        document.getElementById(`${arrowsCodesToColorsMapping[event.key]}-button`)
-    :
-        event.target
-    
-    element.classList.remove('pressdown')
+function handlePointerDown(event) {
+    event.target.classList.add('pressdown')
+}
+
+function handlePointerUp(event) {
+    event.target.classList.remove('pressdown')
 }
 
 addEventListener('DOMContentLoaded', () => {
     addEventListener('keydown', (event) => {
-        handlePressDown(event)
+        if (Object.keys(arrowsCodesToColorsMapping).includes(event.key)) {
+            handlePressDown(event)
+        }
     })
-    
+
     addEventListener('keyup', (event) => {
-        handlePressUp(event)
-        handleColorChoice(arrowsCodesToColorsMapping[event.key])
+        if (Object.keys(arrowsCodesToColorsMapping).includes(event.key)) {
+            handlePressUp(event)
+            handleColorChoice(arrowsCodesToColorsMapping[event.key])
+        }
     })
 })
