@@ -12,6 +12,8 @@ body {
     padding: 0;
     height: 100%;
     background: linear-gradient(rgba(55, 107, 153, 0.76), #2069A8);
+    display: flex;
+    justify-content: center;
 }
 
 .column-container {
@@ -23,6 +25,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    max-width: 430px;
 }
 
 #header {
@@ -34,8 +37,9 @@ body {
     flex-direction: column;
     font-size: 1.2em;
     font-weight: 500;
-    max-width: 600px;
+    width: 100%;
     text-transform: uppercase;
+    text-align: center;
 }
 
 #header.standard {
