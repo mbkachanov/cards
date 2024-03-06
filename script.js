@@ -4,6 +4,12 @@ function handleColorChoice(guessedColor) {
     let randomColor = Math.random() <= 0.5 ? 'white' : 'black'
     let correctness = randomColor === guessedColor ? 'correct' : 'wrong'
 
+    if (correctness === 'correct') {
+        navigator.vibrate(100)
+    } else {
+        navigator.vibrate([100, 50, 100])
+    }
+
     changeCardClass([randomColor, correctness])
     returnToInitialState()
 }

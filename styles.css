@@ -60,11 +60,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-#card::after {
-    padding: 20%;
-    border: 5px solid white;
-}
-
 #card.standard {
     background-image: url('img/prism-grey.png');
     /* background-color: #6D879E; */
